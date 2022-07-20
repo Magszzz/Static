@@ -1,0 +1,147 @@
+@media screen and (max-width: 1120px) {
+  .navigation {
+    .logo {
+      height: 3em;
+      width: 8.25em;
+    }
+
+    .burger {
+      width: 1em;
+      height: 0.5625em;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .home {
+    .hero-img {
+      bottom: 0;
+      right: 0;
+    }
+
+    .text-container > h3 {
+      font-size: 3.75em;
+    }
+
+    .text-container > p {
+      font-size: 18px;
+    }
+  }
+
+  .person-extension {
+    padding: 0;
+    .item-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      img,
+      div {
+        width: 100%;
+
+        div {
+          h5 {
+            font-family: 'MFred';
+            font-size: size(15);
+          }
+
+          p {
+            font-size: size(10);
+            font-family: 'CircularXX';
+            line-height: 1.1;
+          }
+        }
+      }
+    }
+  }
+
+  .differences {
+    padding: 0;
+    .diff {
+      width: 100%;
+      flex-direction: column;
+
+      .diff-texts {
+        width: 100%;
+
+        h3 {
+          font-size: size(36);
+        }
+
+        div {
+          font-size: size(13);
+        }
+      }
+
+      .wheel-container {
+        width: 100%;
+        padding: size(5);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    background: url('../imgs/mobile-hero.png') no-repeat cover;
+    .text-container > p,
+    .text-container > a {
+      display: none;
+    }
+  }
+  .home-extension {
+    display: block;
+  }
+
+  .person-extension {
+    .item-container {
+      div {
+        .assess-items {
+          .items {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: size(20);
+
+    div {
+      &:nth-child(1) {
+        width: 100%;
+        text-align: center;
+
+        div {
+          margin: size(5) auto;
+        }
+      }
+      &:nth-child(2) {
+        width: 100%;
+        text-align: center;
+        ul {
+          font-size: size(12);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navigation {
+    padding: 0.425em 1.2625em 0;
+
+    .logo {
+      height: 2em;
+      width: 7.25em;
+    }
+
+    .burger {
+      width: 0.8em;
+      height: 0.3625em;
+    }
+  }
+}

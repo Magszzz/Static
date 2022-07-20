@@ -1,0 +1,54 @@
+@function size($value) {
+  @return ($value / 12) * 1em;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+}
+
+@font-face {
+  font-family: 'CircularXX';
+  src: url('../../assets/fonts/custom/CircularXX-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/custom/CircularXX-Bold.woff') format('woff'),
+    url('../../assets/fonts/custom/CircularXX-Bold.ttf') format('truetype'),
+    url('../../assets/fonts/custom/CircularXX-Bold.svg#CircularXX-Bold')
+      format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MFred';
+  src: url('../../assets/fonts/custom/MFred.woff2') format('woff2'),
+    url('../../assets/fonts/custom/MFred.woff') format('woff'),
+    url('../../assets/fonts/custom/MFred.ttf') format('truetype'),
+    url('../../assets/fonts/custom/MFred.svg#MFred') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('../../assets/fonts/custom/CircularXX-Light.woff2') format('woff2'),
+    url('../../assets/fonts/custom/CircularXX-Light.woff') format('woff'),
+    url('../../assets/fonts/custom/CircularXX-Light.ttf') format('truetype'),
+    url('../../assets/fonts/custom/CircularXX-Light.svg#CircularXX-Light')
+      format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AW Conqueror Didot';
+  src: url('../../assets/fonts/custom/AWConquerorDidot-Light.woff2')
+      format('woff2'),
+    url('../../assets/fonts/custom/AWConquerorDidot-Light.woff') format('woff'),
+    url('../../assets/fonts/custom/AWConquerorDidot-Light.ttf')
+      format('truetype'),
+    url('../../assets/fonts/custom/AWConquerorDidot-Light.svg#AWConquerorDidot-Light')
+      format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

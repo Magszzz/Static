@@ -1,0 +1,35 @@
+.assessment {
+  background-color: #bacadb;
+
+  h3 {
+    font-family: 'MFred';
+    font-size: size(22);
+    letter-spacing: 0.15em;
+    color: #000000;
+  }
+
+  p {
+    font-size: size(11);
+    max-width: size(400);
+    font-family: 'AW Conqueror Didot';
+    margin: 0 auto;
+  }
+
+  a {
+    button {
+      background-color: #000000;
+      color: #fff;
+      letter-spacing: 0.1em;
+      font-family: 'MFred';
+      font-size: size(12);
+      width: size(150);
+      outline: none;
+      border: none;
+      &:hover {
+        color: #000000;
+        background-color: #fff;
+        transition: all 0.7s ease-in-out;
+      }
+    }
+  }
+}

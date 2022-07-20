@@ -1,0 +1,58 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.825em 1.5625em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  .logo {
+    height: 4em;
+    width: 11.25em;
+  }
+
+  .burger {
+    width: size(12);
+    height: size(12);
+    cursor: pointer;
+  }
+
+  .close {
+    width: size(12);
+    height: size(12);
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    font-size: 1.375em;
+    letter-spacing: 0.2em;
+    font-family: 'MFred';
+    padding: 0.188rem 0.625rem 0;
+  }
+
+  .btn-white {
+    border: 0.0625em solid #fff;
+    color: #fff;
+  }
+}
+
+.navigation-color {
+  background-color: transparent;
+}
+
+.first,
+.second {
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+}

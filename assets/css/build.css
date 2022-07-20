@@ -1,0 +1,669 @@
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+}
+
+@font-face {
+  font-family: "CircularXX";
+  src: url("../../assets/fonts/custom/CircularXX-Bold.woff2") format("woff2"), url("../../assets/fonts/custom/CircularXX-Bold.woff") format("woff"), url("../../assets/fonts/custom/CircularXX-Bold.ttf") format("truetype"), url("../../assets/fonts/custom/CircularXX-Bold.svg#CircularXX-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MFred";
+  src: url("../../assets/fonts/custom/MFred.woff2") format("woff2"), url("../../assets/fonts/custom/MFred.woff") format("woff"), url("../../assets/fonts/custom/MFred.ttf") format("truetype"), url("../../assets/fonts/custom/MFred.svg#MFred") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CircularXX";
+  src: url("../../assets/fonts/custom/CircularXX-Light.woff2") format("woff2"), url("../../assets/fonts/custom/CircularXX-Light.woff") format("woff"), url("../../assets/fonts/custom/CircularXX-Light.ttf") format("truetype"), url("../../assets/fonts/custom/CircularXX-Light.svg#CircularXX-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AW Conqueror Didot";
+  src: url("../../assets/fonts/custom/AWConquerorDidot-Light.woff2") format("woff2"), url("../../assets/fonts/custom/AWConquerorDidot-Light.woff") format("woff"), url("../../assets/fonts/custom/AWConquerorDidot-Light.ttf") format("truetype"), url("../../assets/fonts/custom/AWConquerorDidot-Light.svg#AWConquerorDidot-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  font-size: 16px;
+}
+
+.navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.825em 1.5625em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.navigation .logo {
+  height: 4em;
+  width: 11.25em;
+}
+.navigation .burger {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+.navigation .close {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+.navigation a {
+  text-decoration: none;
+}
+.navigation button {
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  font-size: 1.375em;
+  letter-spacing: 0.2em;
+  font-family: "MFred";
+  padding: 0.188rem 0.625rem 0;
+}
+.navigation .btn-white {
+  border: 0.0625em solid #fff;
+  color: #fff;
+}
+
+.navigation-color {
+  background-color: transparent;
+}
+
+.first,
+.second {
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+}
+
+.modal-parent {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+.modal-parent .navigation .btn-black {
+  border: 0.0625em solid #000000;
+  color: #000000;
+}
+.modal-parent .links-container a,
+.modal-parent .links-container a:hover,
+.modal-parent .links-container a:focus,
+.modal-parent .links-container a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.modal-parent .links-container a p {
+  font-family: "MFred";
+  margin: 0 0 0.4166666667em 0;
+  font-size: 1.8333333333em;
+  line-height: 1.5;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../imgs/hero-bg.jpg") no-repeat center/cover;
+  color: #fff;
+}
+.home .text-container > h3 {
+  font-family: "MFred";
+  font-size: 3.1666666667em;
+  letter-spacing: 0.1em;
+  line-height: 1.15;
+}
+.home .text-container > p {
+  font-family: "AW Conqueror Didot";
+  font-size: 1em;
+  width: 35.914375em;
+  line-height: 1.25;
+}
+.home .text-container {
+  z-index: 2;
+}
+.home .text-container a > button {
+  font-family: "MFred";
+  outline: none;
+  border: none;
+  font-size: 15px;
+  width: 203px;
+  max-width: 200px;
+  letter-spacing: 0.2em;
+  background-color: #ffffff;
+}
+.home .book-now:hover {
+  background-color: rgb(132, 131, 131);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.home .text-container > div > a > img {
+  width: 3em;
+  height: 1.5em;
+}
+.home .hero-img {
+  width: 25em;
+  height: 33.3333333333em;
+  right: 5em;
+}
+.home .hero-img img {
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.home-extension {
+  display: none;
+  background-color: #000000;
+}
+.home-extension p {
+  font-family: "AW Conqueror Didot";
+  font-size: 18px;
+  line-height: 1.15;
+}
+.home-extension a > button {
+  font-family: "MFred";
+  outline: none;
+  border: none;
+  font-size: 15px;
+  width: 203px;
+  max-width: 200px;
+  letter-spacing: 0.2em;
+  background-color: #ffffff;
+}
+.home-extension a > button:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.packages {
+  width: 100%;
+  background-color: #f7e2d0;
+  font-family: "MFred";
+  text-align: center;
+}
+.packages h5 {
+  font-size: 1.8333333333em;
+  letter-spacing: 0.1em;
+}
+.packages p {
+  font-size: 1.0833333333em;
+  font-family: "AW Conqueror Didot";
+}
+.packages span {
+  font-size: 1.0833333333em;
+  font-weight: bold;
+}
+.packages div a {
+  text-decoration: none;
+}
+.packages div a button {
+  outline: none;
+  border: none;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #000000;
+  width: 12em;
+  letter-spacing: 0.1em;
+}
+.packages div a:hover {
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.person-service {
+  background-color: #d9dadb;
+  text-align: center;
+  color: #000000;
+}
+.person-service div h1 {
+  font-family: "MFred";
+  font-size: 3.1666666667em;
+  letter-spacing: 0.1em;
+}
+.person-service div p {
+  font-family: "AW Conqueror Didot";
+  font-size: 1.0833333333em;
+  color: #0d0d0d;
+  max-width: 40em;
+}
+.person-service div a {
+  text-decoration: none;
+}
+.person-service div a button {
+  font-family: "MFred";
+  outline: none;
+  border: none;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #000000;
+  width: 12em;
+  letter-spacing: 0.1em;
+}
+.person-service div a:hover {
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.person-extension {
+  background-color: #d9dadb;
+  padding: 3.3333333333em 0;
+}
+.person-extension .item-container {
+  width: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.person-extension .item-container img {
+  width: 50%;
+}
+.person-extension .item-container div {
+  width: 50%;
+  background-color: #ffffff;
+  height: inherit;
+}
+.person-extension .item-container div div h5 {
+  font-family: "MFred";
+  font-size: 1.125em;
+}
+.person-extension .item-container div div p {
+  font-size: 0.6666666667em;
+  font-family: "CircularXX";
+  line-height: 1.1;
+}
+.person-extension .item-container div .assess-items .items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 1fr) 0.5rem minmax(0, 1fr) 0.5rem minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  font-family: "CircularXX";
+}
+.person-extension .item-container div .assess-items .items div {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+.person-extension .item-container div .assess-items .items div img {
+  margin: 0 auto;
+}
+.person-extension .item-container div .assess-items .items div .t1 {
+  width: 1.75em;
+}
+.person-extension .item-container div .assess-items .items div .t2 {
+  width: 2.1666666667em;
+}
+.person-extension .item-container div .assess-items .items div .t3 {
+  width: 1.5833333333em;
+}
+.person-extension .item-container div .assess-items .items div .t4 {
+  width: 1.25em;
+}
+
+.guarantee {
+  width: 100%;
+  background-color: #9ea38c;
+  font-family: "MFred";
+  text-align: center;
+  color: white;
+}
+.guarantee h5 {
+  letter-spacing: 0.1em;
+  font-size: 1.8333333333em;
+}
+.guarantee p {
+  letter-spacing: 0.2em;
+  font-size: 1.25em;
+  margin: 0 auto;
+  max-width: 16.6666666667em;
+  line-height: 1.5;
+}
+
+.differences {
+  width: 100%;
+  background-color: white;
+  padding: 3.3333333333em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.differences .diff {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.differences .diff .diff-texts {
+  width: 50%;
+  text-align: center;
+}
+.differences .diff .diff-texts h3 {
+  font-size: 2.8333333333em;
+  font-family: "MFred";
+  letter-spacing: 0.1em;
+}
+.differences .diff .diff-texts div {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 25em;
+  font-size: 0.9166666667em;
+  font-family: "AW Conqueror Didot";
+}
+.differences .diff .wheel-container {
+  width: 50%;
+}
+.differences .diff .wheel-container img {
+  width: 100%;
+}
+
+.assessment {
+  background-color: #bacadb;
+}
+.assessment h3 {
+  font-family: "MFred";
+  font-size: 1.8333333333em;
+  letter-spacing: 0.15em;
+  color: #000000;
+}
+.assessment p {
+  font-size: 0.9166666667em;
+  max-width: 33.3333333333em;
+  font-family: "AW Conqueror Didot";
+  margin: 0 auto;
+}
+.assessment a button {
+  background-color: #000000;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-family: "MFred";
+  font-size: 1em;
+  width: 12.5em;
+  outline: none;
+  border: none;
+}
+.assessment a button:hover {
+  color: #000000;
+  background-color: #fff;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.footer {
+  color: #fff;
+  padding: 3.3333333333em;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2em;
+}
+.footer div:nth-child(1) {
+  width: 50%;
+}
+.footer div:nth-child(1) p {
+  font-family: "MFred";
+  font-size: 1.9166666667em;
+  letter-spacing: 0.1em;
+}
+.footer div:nth-child(1) span {
+  font-family: "CircularXX";
+  font-size: 0.8333333333em;
+}
+.footer div:nth-child(1) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
+  width: 100%;
+  height: 2.6666666667em;
+}
+.footer div:nth-child(1) div input {
+  outline: none;
+  font-family: "CircularXX";
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 0.75em;
+}
+.footer div:nth-child(1) div button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.footer div:nth-child(1) div button img {
+  width: 1.25em;
+}
+.footer div:nth-child(2) {
+  width: 40%;
+}
+.footer div:nth-child(2) ul {
+  list-style: none;
+  font-family: "CircularXX";
+  font-size: 0.75em;
+}
+.footer div:nth-child(2) ul a,
+.footer div:nth-child(2) ul a:hover,
+.footer div:nth-child(2) ul a:focus,
+.footer div:nth-child(2) ul a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.footer div:nth-child(2) ul li:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1120px) {
+  .navigation .logo {
+    height: 3em;
+    width: 8.25em;
+  }
+  .navigation .burger {
+    width: 1em;
+    height: 0.5625em;
+  }
+}
+@media screen and (max-width: 991px) {
+  .home .hero-img {
+    bottom: 0;
+    right: 0;
+  }
+  .home .text-container > h3 {
+    font-size: 3.75em;
+  }
+  .home .text-container > p {
+    font-size: 18px;
+  }
+
+  .person-extension {
+    padding: 0;
+  }
+  .person-extension .item-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .person-extension .item-container img,
+.person-extension .item-container div {
+    width: 100%;
+  }
+  .person-extension .item-container img div h5,
+.person-extension .item-container div div h5 {
+    font-family: "MFred";
+    font-size: 1.25em;
+  }
+  .person-extension .item-container img div p,
+.person-extension .item-container div div p {
+    font-size: 0.8333333333em;
+    font-family: "CircularXX";
+    line-height: 1.1;
+  }
+
+  .differences {
+    padding: 0;
+  }
+  .differences .diff {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .differences .diff .diff-texts {
+    width: 100%;
+  }
+  .differences .diff .diff-texts h3 {
+    font-size: 3em;
+  }
+  .differences .diff .diff-texts div {
+    font-size: 1.0833333333em;
+  }
+  .differences .diff .wheel-container {
+    width: 100%;
+    padding: 0.4166666667em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home {
+    background: url("../imgs/mobile-hero.png") no-repeat cover;
+  }
+  .home .text-container > p,
+.home .text-container > a {
+    display: none;
+  }
+
+  .home-extension {
+    display: block;
+  }
+
+  .person-extension .item-container div .assess-items .items {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.6666666667em;
+  }
+  .footer div:nth-child(1) {
+    width: 100%;
+    text-align: center;
+  }
+  .footer div:nth-child(1) div {
+    margin: 0.4166666667em auto;
+  }
+  .footer div:nth-child(2) {
+    width: 100%;
+    text-align: center;
+  }
+  .footer div:nth-child(2) ul {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .navigation {
+    padding: 0.425em 1.2625em 0;
+  }
+  .navigation .logo {
+    height: 2em;
+    width: 7.25em;
+  }
+  .navigation .burger {
+    width: 0.8em;
+    height: 0.3625em;
+  }
+}

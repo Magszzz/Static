@@ -1,0 +1,42 @@
+.packages {
+  width: 100%;
+  background-color: #f7e2d0;
+  font-family: 'MFred';
+  text-align: center;
+
+  h5 {
+    font-size: size(22);
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    font-size: size(13);
+    font-family: 'AW Conqueror Didot';
+  }
+
+  span {
+    font-size: size(13);
+    font-weight: bold;
+  }
+
+  div {
+    a {
+      text-decoration: none;
+      button {
+        outline: none;
+        border: none;
+        font-size: 1em;
+        color: #ffffff;
+        background-color: #000000;
+        width: 12em;
+        letter-spacing: 0.1em;
+      }
+
+      &:hover {
+        color: #000000;
+        background-color: #ffffff;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}

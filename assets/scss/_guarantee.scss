@@ -1,0 +1,20 @@
+.guarantee {
+  width: 100%;
+  background-color: #9ea38c;
+  font-family: 'MFred';
+  text-align: center;
+  color: #ffffffff;
+
+  h5 {
+    letter-spacing: 0.1em;
+    font-size: size(22);
+  }
+
+  p {
+    letter-spacing: 0.2em;
+    font-size: size(15);
+    margin: 0 auto;
+    max-width: size(200);
+    line-height: 1.5;
+  }
+}
