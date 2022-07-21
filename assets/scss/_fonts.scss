@@ -18,6 +18,16 @@ html {
   font-style: normal;
   font-display: swap;
 }
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
 @font-face {
   font-family: 'MFred';
   src: url('../../assets/fonts/custom/MFred.woff2') format('woff2'),

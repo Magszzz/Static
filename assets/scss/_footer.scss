@@ -12,12 +12,12 @@
     &:nth-child(1) {
       width: 50%;
 
-      p {
+      .p1 {
         font-family: 'MFred';
         font-size: size(23);
         letter-spacing: 0.1em;
       }
-      span {
+      .p2 {
         font-family: 'CircularXX';
         font-size: size(10);
       }

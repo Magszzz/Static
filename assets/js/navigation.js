@@ -1,6 +1,7 @@
 gsap.registerPlugin(ScrollTrigger)
 const mOff = gsap.timeline({ paused: true })
 const mOn = gsap.timeline({ paused: true })
+
 gsap.to('#navigation', {
   scrollTrigger: {
     trigger: '.second',
@@ -34,7 +35,6 @@ const modalOn = () => {
       ease: Power1.easeInOut,
     })
   mOn.play()
-  console.log('asd')
 }
 
 $('.burger').click(modalOn)

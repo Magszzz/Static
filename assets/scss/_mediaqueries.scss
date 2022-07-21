@@ -14,9 +14,11 @@
 
 @media screen and (max-width: 991px) {
   .home {
-    .hero-img {
-      bottom: 0;
-      right: 0;
+    .hero-img-1 {
+      display: none;
+    }
+    .hero-img-2 {
+      display: initial;
     }
 
     .text-container > h3 {
@@ -84,10 +86,16 @@
 
 @media screen and (max-width: 768px) {
   .home {
-    background: url('../imgs/mobile-hero.png') no-repeat cover;
     .text-container > p,
     .text-container > a {
       display: none;
+    }
+
+    .hero-img-2 {
+      right: 0;
+      bottom: initial;
+      width: size(200);
+      height: size(250);
     }
   }
   .home-extension {
@@ -127,6 +135,12 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home {
+    background: url('../imgs/mobile-hero.png') no-repeat center / cover;
   }
 }
 

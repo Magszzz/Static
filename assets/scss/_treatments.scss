@@ -1,0 +1,64 @@
+.treatments {
+  width: 100%;
+  padding: size(30);
+  .heading {
+    text-align: center;
+
+    h3 {
+      font-family: 'MFred';
+      font-size: size(36);
+      letter-spacing: 0.1em;
+    }
+
+    p {
+      font-size: size(11);
+      font-family: 'AW Conqueror Didot';
+    }
+  }
+
+  .desktop {
+    .slick-prev:before {
+      content: '';
+      background-image: url('../imgs/left-arrow.png');
+      background-size: 20px 30px;
+      display: inline-block;
+      width: 20px;
+      height: 30px;
+    }
+    .slick-next:before {
+      background-image: url('../imgs/right-arrow.png');
+      background-size: 20px 30px;
+      display: inline-block;
+      width: 20px;
+      height: 30px;
+    }
+    .treatment-container {
+      margin: 0 20px;
+      overflow: hidden;
+      .treatment-item {
+        height: size(380);
+        div {
+          .heading {
+            font-family: 'MFred' !important;
+            font-size: size(18) !important;
+            letter-spacing: 0.1;
+          }
+
+          p {
+            font-family: 'CircularXX';
+            font-size: size(9);
+          }
+
+          .p1 {
+            font-weight: bold;
+          }
+        }
+      }
+      .item-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

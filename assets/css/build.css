@@ -10,6 +10,15 @@ html {
   font-style: normal;
   font-display: swap;
 }
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
 @font-face {
   font-family: "MFred";
   src: url("../../assets/fonts/custom/MFred.woff2") format("woff2"), url("../../assets/fonts/custom/MFred.woff") format("woff"), url("../../assets/fonts/custom/MFred.ttf") format("truetype"), url("../../assets/fonts/custom/MFred.svg#MFred") format("svg");
@@ -57,7 +66,7 @@ html {
   width: 11.25em;
 }
 .navigation .burger {
-  width: 1em;
+  width: 1.0833333333em;
   height: 1em;
   cursor: pointer;
 }
@@ -85,13 +94,6 @@ html {
 
 .navigation-color {
   background-color: transparent;
-}
-
-.first,
-.second {
-  width: 100%;
-  height: 100vh;
-  background-color: gray;
 }
 
 .modal-parent {
@@ -136,6 +138,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
   background: url("../imgs/hero-bg.jpg") no-repeat center/cover;
   color: #fff;
 }
@@ -176,13 +179,19 @@ html {
 .home .hero-img {
   width: 25em;
   height: 33.3333333333em;
-  right: 5em;
 }
 .home .hero-img img {
   width: 100%;
   height: 100%;
-  position: sticky;
-  top: 0;
+}
+.home .hero-img-1 {
+  right: 5em;
+  display: initial;
+}
+.home .hero-img-2 {
+  bottom: 0;
+  right: 0;
+  display: none;
 }
 
 .home-extension {
@@ -204,10 +213,65 @@ html {
   letter-spacing: 0.2em;
   background-color: #ffffff;
 }
-.home-extension a > button:hover {
-  opacity: 0.7;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+
+.treatments {
+  width: 100%;
+  padding: 2.5em;
+}
+.treatments .heading {
+  text-align: center;
+}
+.treatments .heading h3 {
+  font-family: "MFred";
+  font-size: 3em;
+  letter-spacing: 0.1em;
+}
+.treatments .heading p {
+  font-size: 0.9166666667em;
+  font-family: "AW Conqueror Didot";
+}
+.treatments .desktop .slick-prev:before {
+  content: "";
+  background-image: url("../imgs/left-arrow.png");
+  background-size: 20px 30px;
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+}
+.treatments .desktop .slick-next:before {
+  background-image: url("../imgs/right-arrow.png");
+  background-size: 20px 30px;
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+}
+.treatments .desktop .treatment-container {
+  margin: 0 20px;
+  overflow: hidden;
+}
+.treatments .desktop .treatment-container .treatment-item {
+  height: 31.6666666667em;
+}
+.treatments .desktop .treatment-container .treatment-item div .heading {
+  font-family: "MFred" !important;
+  font-size: 1.5em !important;
+  letter-spacing: 0.1;
+}
+.treatments .desktop .treatment-container .treatment-item div p {
+  font-family: "CircularXX";
+  font-size: 0.75em;
+}
+.treatments .desktop .treatment-container .treatment-item div .p1 {
+  font-weight: bold;
+}
+.treatments .desktop .treatment-container .item-logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .packages {
@@ -220,11 +284,11 @@ html {
   font-size: 1.8333333333em;
   letter-spacing: 0.1em;
 }
-.packages p {
+.packages .long-text {
   font-size: 1.0833333333em;
   font-family: "AW Conqueror Didot";
 }
-.packages span {
+.packages .price {
   font-size: 1.0833333333em;
   font-weight: bold;
 }
@@ -469,12 +533,12 @@ html {
 .footer div:nth-child(1) {
   width: 50%;
 }
-.footer div:nth-child(1) p {
+.footer div:nth-child(1) .p1 {
   font-family: "MFred";
   font-size: 1.9166666667em;
   letter-spacing: 0.1em;
 }
-.footer div:nth-child(1) span {
+.footer div:nth-child(1) .p2 {
   font-family: "CircularXX";
   font-size: 0.8333333333em;
 }
@@ -547,9 +611,11 @@ html {
   }
 }
 @media screen and (max-width: 991px) {
-  .home .hero-img {
-    bottom: 0;
-    right: 0;
+  .home .hero-img-1 {
+    display: none;
+  }
+  .home .hero-img-2 {
+    display: initial;
   }
   .home .text-container > h3 {
     font-size: 3.75em;
@@ -615,12 +681,15 @@ html {
   }
 }
 @media screen and (max-width: 768px) {
-  .home {
-    background: url("../imgs/mobile-hero.png") no-repeat cover;
-  }
   .home .text-container > p,
 .home .text-container > a {
     display: none;
+  }
+  .home .hero-img-2 {
+    right: 0;
+    bottom: initial;
+    width: 16.6666666667em;
+    height: 20.8333333333em;
   }
 
   .home-extension {
@@ -652,6 +721,11 @@ html {
   }
   .footer div:nth-child(2) ul {
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .home {
+    background: url("../imgs/mobile-hero.png") no-repeat center/cover;
   }
 }
 @media screen and (max-width: 320px) {
