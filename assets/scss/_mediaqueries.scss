@@ -1,3 +1,38 @@
+@media screen and (max-width: 1500px) {
+  .navigation {
+    justify-content: space-between;
+
+    .logo {
+      height: 3em;
+      width: 10.25em;
+    }
+
+    div {
+      width: fit-content;
+      .link {
+        display: none;
+      }
+    }
+
+    .burger {
+      display: initial;
+    }
+
+    .btn-white {
+      display: initial;
+    }
+  }
+
+  .hero-img {
+    width: size(280);
+    height: size(350);
+  }
+
+  .hero-img {
+    right: 5em;
+  }
+}
+
 @media screen and (max-width: 1120px) {
   .navigation {
     .logo {
@@ -132,6 +167,25 @@
         text-align: center;
         ul {
           font-size: size(12);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .treatments {
+    padding: size(20);
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: initial;
+      .treatment-container {
+        margin: 0 10px;
+        .treatment-item {
+          height: fit-content;
         }
       }
     }

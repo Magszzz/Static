@@ -1,10 +1,11 @@
 gsap.registerPlugin(ScrollTrigger)
 const mOff = gsap.timeline({ paused: true })
 const mOn = gsap.timeline({ paused: true })
+const nav = gsap.timeline()
 
-gsap.to('#navigation', {
+nav.to('#navigation', {
   scrollTrigger: {
-    trigger: '.second',
+    trigger: '.treatments',
     end: 'top -90%',
     scrub: 0.1,
   },

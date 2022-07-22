@@ -12,9 +12,9 @@
 
   .text-container > h3 {
     font-family: 'MFred';
-    font-size: size(38);
-    letter-spacing: 0.1em;
-    line-height: 1.15;
+    font-size: size(35);
+    letter-spacing: size(1);
+    line-height: 1;
   }
 
   .text-container > p {
@@ -30,7 +30,7 @@
       font-family: 'MFred';
       outline: none;
       border: none;
-      font-size: 15px;
+      font-size: size(10);
       width: 203px;
       max-width: 200px;
       letter-spacing: 0.2em;
@@ -48,8 +48,6 @@
   }
 
   .hero-img {
-    width: size(300);
-    height: size(400);
     img {
       width: 100%;
       height: 100%;
@@ -57,7 +55,7 @@
   }
 
   .hero-img-1 {
-    right: 5em;
+    right: size(100);
     display: initial;
   }
   .hero-img-2 {

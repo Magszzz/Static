@@ -52,9 +52,9 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.825em 1.5625em;
   position: fixed;
   top: 0;
@@ -62,13 +62,33 @@ html {
   z-index: 999;
 }
 .navigation .logo {
-  height: 4em;
-  width: 11.25em;
+  height: 5em;
+  width: 12.25em;
+}
+.navigation div {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navigation div a {
+  color: #fff;
+}
+.navigation div a p {
+  font-family: "MFred";
+  font-size: 1.5em;
+  letter-spacing: 0.1666666667em;
 }
 .navigation .burger {
   width: 1.0833333333em;
   height: 1em;
   cursor: pointer;
+  display: none;
 }
 .navigation .close {
   width: 1em;
@@ -90,6 +110,7 @@ html {
 .navigation .btn-white {
   border: 0.0625em solid #fff;
   color: #fff;
+  display: none;
 }
 
 .navigation-color {
@@ -144,9 +165,9 @@ html {
 }
 .home .text-container > h3 {
   font-family: "MFred";
-  font-size: 3.1666666667em;
-  letter-spacing: 0.1em;
-  line-height: 1.15;
+  font-size: 2.9166666667em;
+  letter-spacing: 0.0833333333em;
+  line-height: 1;
 }
 .home .text-container > p {
   font-family: "AW Conqueror Didot";
@@ -161,7 +182,7 @@ html {
   font-family: "MFred";
   outline: none;
   border: none;
-  font-size: 15px;
+  font-size: 0.8333333333em;
   width: 203px;
   max-width: 200px;
   letter-spacing: 0.2em;
@@ -176,16 +197,12 @@ html {
   width: 3em;
   height: 1.5em;
 }
-.home .hero-img {
-  width: 25em;
-  height: 33.3333333333em;
-}
 .home .hero-img img {
   width: 100%;
   height: 100%;
 }
 .home .hero-img-1 {
-  right: 5em;
+  right: 8.3333333333em;
   display: initial;
 }
 .home .hero-img-2 {
@@ -230,7 +247,14 @@ html {
   font-size: 0.9166666667em;
   font-family: "AW Conqueror Didot";
 }
-.treatments .desktop .slick-prev:before {
+.treatments .desktop {
+  display: initial;
+}
+.treatments .mobile {
+  display: none;
+}
+.treatments .desktop .slick-prev:before,
+.treatments .mobile .slick-prev:before {
   content: "";
   background-image: url("../imgs/left-arrow.png");
   background-size: 20px 30px;
@@ -238,33 +262,40 @@ html {
   width: 20px;
   height: 30px;
 }
-.treatments .desktop .slick-next:before {
+.treatments .desktop .slick-next:before,
+.treatments .mobile .slick-next:before {
   background-image: url("../imgs/right-arrow.png");
   background-size: 20px 30px;
   display: inline-block;
   width: 20px;
   height: 30px;
 }
-.treatments .desktop .treatment-container {
+.treatments .desktop .treatment-container,
+.treatments .mobile .treatment-container {
   margin: 0 20px;
   overflow: hidden;
 }
-.treatments .desktop .treatment-container .treatment-item {
+.treatments .desktop .treatment-container .treatment-item,
+.treatments .mobile .treatment-container .treatment-item {
   height: 31.6666666667em;
 }
-.treatments .desktop .treatment-container .treatment-item div .heading {
+.treatments .desktop .treatment-container .treatment-item div .heading,
+.treatments .mobile .treatment-container .treatment-item div .heading {
   font-family: "MFred" !important;
   font-size: 1.5em !important;
   letter-spacing: 0.1;
 }
-.treatments .desktop .treatment-container .treatment-item div p {
+.treatments .desktop .treatment-container .treatment-item div p,
+.treatments .mobile .treatment-container .treatment-item div p {
   font-family: "CircularXX";
   font-size: 0.75em;
 }
-.treatments .desktop .treatment-container .treatment-item div .p1 {
+.treatments .desktop .treatment-container .treatment-item div .p1,
+.treatments .mobile .treatment-container .treatment-item div .p1 {
   font-weight: bold;
 }
-.treatments .desktop .treatment-container .item-logo {
+.treatments .desktop .treatment-container .item-logo,
+.treatments .mobile .treatment-container .item-logo {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,6 +303,11 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.treatments .desktop .treatment-container:hover,
+.treatments .mobile .treatment-container:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .packages {
@@ -304,7 +340,7 @@ html {
   width: 12em;
   letter-spacing: 0.1em;
 }
-.packages div a:hover {
+.packages div a button:hover {
   color: #000000;
   background-color: #ffffff;
   -webkit-transition: all 0.5s ease-in-out;
@@ -340,7 +376,7 @@ html {
   width: 12em;
   letter-spacing: 0.1em;
 }
-.person-service div a:hover {
+.person-service div a button:hover {
   color: #000000;
   background-color: #ffffff;
   -webkit-transition: all 0.5s ease-in-out;
@@ -600,6 +636,40 @@ html {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1500px) {
+  .navigation {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navigation .logo {
+    height: 3em;
+    width: 10.25em;
+  }
+  .navigation div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .navigation div .link {
+    display: none;
+  }
+  .navigation .burger {
+    display: initial;
+  }
+  .navigation .btn-white {
+    display: initial;
+  }
+
+  .hero-img {
+    width: 23.3333333333em;
+    height: 29.1666666667em;
+  }
+
+  .hero-img {
+    right: 5em;
+  }
+}
 @media screen and (max-width: 1120px) {
   .navigation .logo {
     height: 3em;
@@ -721,6 +791,25 @@ html {
   }
   .footer div:nth-child(2) ul {
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 750px) {
+  .treatments {
+    padding: 1.6666666667em;
+  }
+  .treatments .desktop {
+    display: none;
+  }
+  .treatments .mobile {
+    display: initial;
+  }
+  .treatments .mobile .treatment-container {
+    margin: 0 10px;
+  }
+  .treatments .mobile .treatment-container .treatment-item {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @media screen and (max-width: 450px) {

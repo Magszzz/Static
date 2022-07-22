@@ -1,6 +1,6 @@
-// $(document).ready(function () {
-//   $(this).scrollTop(0)
-// })
+$(document).ready(function () {
+  $(this).scrollTop(0)
+})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -10,6 +10,7 @@ tl.staggerFrom(
   [
     '.burger',
     '.logo',
+    '.link',
     '.book-btn',
     '.hero-img',
     '.text-container h3',

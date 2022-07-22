@@ -17,6 +17,15 @@
   }
 
   .desktop {
+    display: initial;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop,
+  .mobile {
     .slick-prev:before {
       content: '';
       background-image: url('../imgs/left-arrow.png');
@@ -58,6 +67,9 @@
         width: 100%;
         display: flex;
         justify-content: center;
+      }
+      &:hover {
+        cursor: grab;
       }
     }
   }

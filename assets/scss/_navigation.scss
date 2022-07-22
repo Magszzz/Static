@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0.825em 1.5625em;
   position: fixed;
   top: 0;
@@ -10,14 +10,30 @@
   z-index: 999;
 
   .logo {
-    height: 4em;
-    width: 11.25em;
+    height: 5em;
+    width: 12.25em;
+  }
+
+  div {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      color: #fff;
+      p {
+        font-family: 'MFred';
+        font-size: size(18);
+        letter-spacing: size(2);
+      }
+    }
   }
 
   .burger {
     width: size(13);
     height: size(12);
     cursor: pointer;
+    display: none;
   }
 
   .close {
@@ -43,6 +59,7 @@
   .btn-white {
     border: 0.0625em solid #fff;
     color: #fff;
+    display: none;
   }
 }
 
